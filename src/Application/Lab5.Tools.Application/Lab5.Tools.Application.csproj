@@ -1,0 +1,6 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <ItemGroup>
+        <ProjectReference Include="..\Lab5.Tools.Application.Abstractions\Lab5.Tools.Application.Abstractions.csproj"/>
+        <ProjectReference Include="..\Lab5.Tools.Application.Contracts\Lab5.Tools.Application.Contracts.csproj"/>
+    </ItemGroup>
+</Project>

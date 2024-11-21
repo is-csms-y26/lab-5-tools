@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <ItemGroup>
+        <ProjectReference Include="..\Lab5.Tools.Application.Models\Lab5.Tools.Application.Models.csproj"/>
+    </ItemGroup>
+    <ItemGroup>
+      <PackageReference Include="Itmo.Dev.Platform.Events" />
+    </ItemGroup>
+</Project>
