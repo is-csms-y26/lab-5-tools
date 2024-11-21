@@ -58,7 +58,7 @@ services:
     networks:
       - order-processing-service-network
     volumes:
-      - kafka-data:/kafka-data
+      - order-processing-service-kafka-data:/kafka-data
     ports:
       - '8001:9092'
 
@@ -95,4 +95,4 @@ networks:
     driver: bridge
 
 volumes:
-  kafka-data:
+  order-processing-service-kafka-data:
