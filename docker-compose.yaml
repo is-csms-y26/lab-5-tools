@@ -74,7 +74,7 @@ services:
     ports:
       - "8003:8080"
     volumes:
-      - ./src/Presentation/Lab5.Tools.Presentation.Kafka/protos:/schemas
+      - ./src/Presentation/Lab5.Tools.Presentation.Kafka/protos:/schemas # change path to your local proto directory
     environment:
       kafka.clusters.0.name: kafka
       kafka.clusters.0.bootstrapServers: kafka:9094
