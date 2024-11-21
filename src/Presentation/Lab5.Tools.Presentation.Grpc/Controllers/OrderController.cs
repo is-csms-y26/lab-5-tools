@@ -1,10 +1,10 @@
 using Grpc.Core;
 using Lab5.Tools.Application.Contracts.Orders;
-using Orders.ProcessingService.Contracts;
 using Lab5.Tools.Application.Contracts.Orders.Operations;
+using Orders.ProcessingService.Contracts;
 using System.Diagnostics;
 
-namespace Lab5.Tools.Presentation.Grpc.Controller;
+namespace Lab5.Tools.Presentation.Grpc.Controllers;
 
 public class OrderController : OrderService.OrderServiceBase
 {
@@ -130,8 +130,8 @@ public class OrderController : OrderService.OrderServiceBase
         };
     }
 
-    public override async Task<FinishOrderPackingResponse> FinishOrderDelivery(
-        FinishOrderPackingRequest request,
+    public override async Task<FinishOrderDeliveryResponse> FinishOrderDelivery(
+        FinishOrderDeliveryRequest request,
         ServerCallContext context)
     {
         var applicationRequest = new FinishOrderDelivery.Request(
@@ -145,7 +145,7 @@ public class OrderController : OrderService.OrderServiceBase
 
         return response switch
         {
-            FinishOrderDelivery.Result.Success _ => new FinishOrderPackingResponse(),
+            FinishOrderDelivery.Result.Success _ => new FinishOrderDeliveryResponse(),
 
             FinishOrderDelivery.Result.InvalidState invalidState => throw new RpcException(new Status(
                 StatusCode.InvalidArgument,

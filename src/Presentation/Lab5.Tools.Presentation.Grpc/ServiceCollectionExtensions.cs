@@ -1,5 +1,5 @@
 using Itmo.Dev.Platform.Grpc.Services;
-using Lab5.Tools.Presentation.Grpc.Controller;
+using Lab5.Tools.Presentation.Grpc.Controllers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 

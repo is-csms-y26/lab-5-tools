@@ -11,7 +11,7 @@ service OrderService {
   rpc StartOrderPacking(StartOrderPackingRequest) returns (StartOrderPackingResponse);
   rpc FinishOrderPacking(FinishOrderPackingRequest) returns (FinishOrderPackingResponse);
   rpc StartOrderDelivery(StartOrderDeliveryRequest) returns (StartOrderDeliveryResponse);
-  rpc FinishOrderDelivery(FinishOrderPackingRequest) returns (FinishOrderPackingResponse);
+  rpc FinishOrderDelivery(FinishOrderDeliveryRequest) returns (FinishOrderDeliveryResponse);
 }
 
 
@@ -58,4 +58,7 @@ message FinishOrderDeliveryRequest {
   int64 order_id = 1;
   bool is_successful = 2;
   google.protobuf.StringValue failure_reason = 3;
+}
+
+message FinishOrderDeliveryResponse {
 }
